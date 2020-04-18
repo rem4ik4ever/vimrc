@@ -4,7 +4,7 @@ This is Vimrc that I'm using for my day to day development with TypeScript and R
 
 ## Requirements
 
-- (Vim Plug)[https://github.com/junegunn/vim-plug]
+- [Vim Plug](https://github.com/junegunn/vim-plug)
 - Vim
 - tons of patience while learning Vim
 
