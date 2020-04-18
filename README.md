@@ -31,5 +31,5 @@ This is Vimrc that I'm using for my day to day development with TypeScript and R
 - Copy and paste .vimrc into ~/.vimrc
 - Run `vim ~/.vimrc` => `:source %` => `:PlugInstall`
 
-Check coc.nvim (documentation)[https://github.com/neoclide/coc.nvim] for intellisense like in VS code
+Check coc.nvim [documentation](https://github.com/neoclide/coc.nvim) for intellisense like in VS code
 eg for typescript you will need to run `:CocInstall coc-tsserver`
