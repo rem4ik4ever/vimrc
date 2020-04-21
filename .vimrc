@@ -14,30 +14,45 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 set relativenumber
+set termguicolors
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'morhetz/gruvbox'
+"Utils
 Plug 'jremmen/vim-ripgrep'
+Plug 'vim-utils/vim-man'
+
+"Git
 Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
-Plug 'vim-utils/vim-man'
-Plug 'lyuts/vim-rtags'
+
+"Navigation
 Plug 'git@github.com:kien/ctrlp.vim.git'
 Plug 'mbbill/undotree'
-Plug 'jaredgorski/spacecamp'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+"Intellisense
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'alvan/vim-closetag'
+Plug 'mgechev/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
+"Themes
+Plug 'morhetz/gruvbox'
+Plug 'crusoexia/vim-monokai'
+Plug 'jaredgorski/spacecamp'
 
 call plug#end()
 
-colorscheme spacecamp
+colorscheme monokai
 
 set background=dark
 
@@ -276,3 +291,9 @@ autocmd BufNewFile,BufRead *.js set filetype=javascript.jsx
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 autocmd BufNewFile,BufRead *.ts set filetype=typescript.tsx
 autocmd BufNewFile,BufRead *.ts set filetype=typescript.tsx
+
+"prettier
+let g:prettier#config#single_quote = 'true'
+
+"vim-javascript
+let g:javascript_plugin_jsdoc = 1
