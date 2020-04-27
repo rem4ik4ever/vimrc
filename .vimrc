@@ -1,4 +1,4 @@
-syntax on
+Syntax on
 
 set noerrorbells
 set tabstop=2 softtabstop=2
@@ -24,6 +24,7 @@ call plug#begin('~/.vim/plugged')
 "Utils
 Plug 'jremmen/vim-ripgrep'
 Plug 'vim-utils/vim-man'
+Plug 'tpope/vim-commentary'
 
 "Git
 Plug 'tpope/vim-fugitive'
