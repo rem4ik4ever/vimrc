@@ -1,4 +1,4 @@
-Syntax on
+syntax on
 
 set noerrorbells
 set tabstop=2 softtabstop=2
@@ -45,6 +45,11 @@ Plug 'alvan/vim-closetag'
 Plug 'mgechev/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'heavenshell/vim-jsdoc', {
+  \ 'for': ['javascript', 'javascript.jsx','typescript'],
+  \ 'do': 'make install'
+\}
+Plug 'slim-template/vim-slim'
 
 "Themes
 Plug 'morhetz/gruvbox'
@@ -298,3 +303,4 @@ let g:prettier#config#single_quote = 'true'
 
 "vim-javascript
 let g:javascript_plugin_jsdoc = 1
+
