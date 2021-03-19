@@ -50,6 +50,10 @@ Plug 'heavenshell/vim-jsdoc', {
   \ 'do': 'make install'
 \}
 Plug 'slim-template/vim-slim'
+" make sure to install shellcheck
+" run `brew install shellcheck`
+" more here https://github.com/koalaman/shellcheck
+Plug 'itspriddle/vim-shellcheck'
 
 "Themes
 Plug 'morhetz/gruvbox'
@@ -303,4 +307,3 @@ let g:prettier#config#single_quote = 'true'
 
 "vim-javascript
 let g:javascript_plugin_jsdoc = 1
-
