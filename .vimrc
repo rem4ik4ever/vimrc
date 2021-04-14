@@ -31,7 +31,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
 
 "Navigation
-Plug 'git@github.com:kien/ctrlp.vim.git'
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -50,6 +49,7 @@ Plug 'heavenshell/vim-jsdoc', {
   \ 'do': 'make install'
 \}
 Plug 'slim-template/vim-slim'
+Plug 'ekalinin/Dockerfile.vim'
 " make sure to install shellcheck
 " run `brew install shellcheck`
 " more here https://github.com/koalaman/shellcheck
@@ -71,13 +71,11 @@ if executable('rg')
   let g:rg_derive_root='true'
 endif
 
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let mapleader = " "
 let g:netrw_browse_split=2
 let g_netrw_banner=0
 let g:netrw_winsize=25
 
-let g:ctrlp_use_caching = 0
 let g:ale_linters = {
 \   'python': ['flake8', 'pylint'],
 \   'javascript': ['eslint'],
@@ -95,12 +93,21 @@ let g:ale_fix_on_save = 1
 
 nnoremap ]r :ALENextWrap<CR>     " move to the next ALE warning / error
 nnoremap [r :ALEPreviousWrap<CR> " move to the previous ALE warning / error
+
+" fzf files search
+nnoremap <silent> <C-p> :Files<CR>
+
+" navigation between split windows
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
+
+" netrw sidebar
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+
+" ripgrep
 nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
